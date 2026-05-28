@@ -1,4 +1,4 @@
-const GOOGLE_SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHgE-WPyy0aMpLjIXIaPpRhjW-OI1GUMQn0LNK2wsVUpJNmPA0kZmgiiO8DEiK50DKyQ/exec";
 
 const universities = [
   "Adiong Memorial State College",
