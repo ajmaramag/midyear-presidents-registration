@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2026 Midyear Presidents Alignment Meeting Registration</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="ched-bars" aria-hidden="true">
+        <span class="bar-blue"></span>
+        <span class="bar-red"></span>
+        <span class="bar-yellow"></span>
+      </div>
+
+      <div class="header-shell">
+        <div class="brand-image-wrap">
+          <img
+            class="brand-image"
+            src="assets/occm-logo.jpeg"
+            alt="Office of CHED Commissioner Michelle Aguilar Ong"
+          >
+        </div>
+
+        <div class="header-copy">
+          <p class="eyebrow">Office of CHED Commissioner Michelle Aguilar Ong</p>
+          <h1>2026 Midyear Presidents Alignment Meeting</h1>
+          <p>Registration Form</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <form class="registration-form" id="registrationForm">
+        <section class="form-section">
+          <div class="section-heading">
+            <span class="step">01</span>
+            <div>
+              <h2>University or College President</h2>
+              <p>Primary delegate information for the meeting.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field field-wide" for="institution">
+              <span>State University and College</span>
+              <select id="institution" name="institution" required>
+                <option value="">Choose the university or college</option>
+              </select>
+            </label>
+
+            <label class="field field-wide" for="presidentName">
+              <span>Full name of University/College President</span>
+              <input
+                id="presidentName"
+                name="presidentName"
+                type="text"
+                placeholder="Last Name, First Name"
+                autocomplete="name"
+                required
+              >
+              <small>Use Last Name, First Name format.</small>
+            </label>
+
+            <label class="field" for="presidentPhone">
+              <span>Cellphone number</span>
+              <input
+                id="presidentPhone"
+                name="presidentPhone"
+                type="tel"
+                placeholder="+63 9XX XXX XXXX"
+                autocomplete="tel"
+                required
+              >
+            </label>
+
+            <label class="field" for="presidentEmail">
+              <span>Email address</span>
+              <input
+                id="presidentEmail"
+                name="presidentEmail"
+                type="email"
+                placeholder="president@example.edu.ph"
+                autocomplete="email"
+                required
+              >
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span class="step">02</span>
+            <div>
+              <h2>Companions</h2>
+              <p>Additional attendees joining the 2-day alignment meeting.</p>
+            </div>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Will the University/College President bring companions?</legend>
+            <label class="choice">
+              <input type="radio" name="bringingCompanions" value="yes" required>
+              <span>Yes</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="bringingCompanions" value="no" required>
+              <span>No</span>
+            </label>
+          </fieldset>
+
+          <div class="conditional-panel" id="companionsPanel" hidden>
+            <div class="companion-list" id="companionList"></div>
+            <div class="companion-actions">
+              <button class="button button-secondary" type="button" id="addCompanionButton">
+                + Add another companion
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span class="step">03</span>
+            <div>
+              <h2>Transportation to Clark, Pampanga</h2>
+              <p>Arrival details for coordination with the host team.</p>
+            </div>
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Mode of transportation</legend>
+            <label class="choice">
+              <input type="radio" name="transportMode" value="land" required>
+              <span>Via land</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="transportMode" value="air" required>
+              <span>Via air</span>
+            </label>
+          </fieldset>
+
+          <div class="conditional-panel" id="landPanel" hidden>
+            <fieldset class="choice-group compact">
+              <legend>Land travel arrangement</legend>
+              <label class="choice">
+                <input type="radio" name="landArrangement" value="Driving to Clark" data-required>
+                <span>Driving to Clark</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="landArrangement" value="Public transportation" data-required>
+                <span>Public transportation</span>
+              </label>
+            </fieldset>
+
+            <div class="field-grid">
+              <label class="field" for="landDepartureDateTime">
+                <span>Departure date and time</span>
+                <input
+                  id="landDepartureDateTime"
+                  name="landDepartureDateTime"
+                  type="datetime-local"
+                  data-required
+                >
+              </label>
+            </div>
+          </div>
+
+          <div class="conditional-panel" id="airPanel" hidden>
+            <div class="field-grid">
+              <label class="field" for="departureAirport">
+                <span>Airport of departure</span>
+                <input id="departureAirport" name="departureAirport" type="text" data-required>
+              </label>
+
+              <label class="field" for="arrivalAirport">
+                <span>Airport of arrival</span>
+                <input id="arrivalAirport" name="arrivalAirport" type="text" data-required>
+              </label>
+
+              <label class="field" for="airline">
+                <span>Airline</span>
+                <input id="airline" name="airline" type="text" data-required>
+              </label>
+
+              <label class="field" for="flightDateTime">
+                <span>Flight date and time</span>
+                <input id="flightDateTime" name="flightDateTime" type="datetime-local" data-required>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-heading">
+            <span class="step">04</span>
+            <div>
+              <h2>Accommodation Arrangements</h2>
+              <p>Hotel and stay dates for the meeting period.</p>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field field-wide" for="hotel">
+              <span>Hotel</span>
+              <input id="hotel" name="hotel" type="text" autocomplete="organization" required>
+            </label>
+
+            <label class="field" for="checkIn">
+              <span>Date of check-in</span>
+              <input id="checkIn" name="checkIn" type="date" required>
+            </label>
+
+            <label class="field" for="checkOut">
+              <span>Date of check-out</span>
+              <input id="checkOut" name="checkOut" type="date" required>
+            </label>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button class="button button-primary" type="submit" id="submitButton">
+            Submit registration
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
